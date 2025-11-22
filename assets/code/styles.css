@@ -1,0 +1,118 @@
+:root {
+  font-family: Inter, sans-serif;
+  font-feature-settings: 'liga' 1, 'calt' 1;
+}
+
+@supports (font-variation-settings: normal) {
+  :root {
+    font-family: InterVariable, sans-serif;
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+  min-height: 700vh;
+  background-color: #bad0ff;
+}
+
+.header {
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  padding: 36px 200px;
+  color: #fff;
+}
+
+.multi-line-header {
+  padding: 14px 200px;
+}
+
+.header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(#16096b87, #16096b87), url('https://upload.wikimedia.org/wikipedia/commons/9/9b/US_Flag_Backlit.jpg');
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+}
+
+h1 {
+  margin: 0;
+  font-size: 4rem;
+  line-height: 3.6rem;
+  font-weight: 800;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: calc(100% - 16px);
+  padding: 8px;
+  justify-content: space-evenly;
+  background-color: #08003cc7;
+  backdrop-filter: blur(10px);
+}
+
+.navbar a {
+  text-decoration: none;
+  font-weight: 600;
+  color: #fff;
+  transition: color 0.2s;
+}
+
+.navbar a:hover {
+  color: #bad0ff;
+}
+
+.button {
+  background-color: #e81515;
+  padding: 10px 16px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 600;
+  color: #fff;
+  transition: background-color 0.1s !important;
+}
+
+.button:hover {
+  color: #fff !important;
+  background-color: #f46262;
+}
+
+#overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+#popup {
+  display: none;
+  position: fixed;
+  max-width: 30%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  padding: 15px 20px 30px 20px;
+  border-radius: 10px;
+  background-color: #bad0ff;
+}
+
+#popup h3 {
+  margin: 0 0 10px 0;
+}
+
+#popup p {
+  margin: 0 0 20px 0;
+}
